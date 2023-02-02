@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/rajdhani" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
@@ -14,14 +15,17 @@
         <div class="container">
             <nav class="navbar">
                 <img src="resources/images/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#services">services</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                <div class="menu-icon" onclick="toggleSlider()">
+                  <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#services">services</a></li>
+                  <li><a href="#about">about</a></li>
+                  <li><a href="#portfolio">Portfolio</a></li>
+                  <li><a href="#">Contact Us</a></li>
                 </ul>
-            </nav>
+              </nav>
             <div class="header-text">
                 <h3>Hi i'm Youssef <span>Idry</span></h3>
                 <h1><span>Web</span> Developper</h1>
@@ -128,6 +132,40 @@
         </div>
 
         <!----------------PORTFOLIO----------------------->
+        <div id="portfolio">
+            <div class="container-portfolio">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="resources/images/p2.jpg" alt="">
+                        <div class="layer">
+                            <h3>Social Media App</h3>
+                            <p>the app connects you yo telented people around the world.
+                                download it from link below</p>
+                                <a href="#download"><i class="ri-link" style="color: #fff;"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="resources/images/p2.jpg" alt="">
+                        <div class="layer">
+                            <h3>Social Media App</h3>
+                            <p>the app connects you yo telented people around the world.
+                                download it from link below</p>
+                                <a href="#download"><i class="ri-link" style="color: #fff;"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="resources/images/p2.jpg" alt="">
+                        <div class="layer">
+                            <h3>Social Media App</h3>
+                            <p>the app connects you yo telented people around the world.
+                                download it from link below</p>
+                                <a href="#download"><i class="ri-link" style="color: #fff;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
@@ -144,6 +182,13 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+    </script>
+
+<script>
+    const toggleSlider = () => {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("show-nav");
+    };
     </script>
 </body>
 </html>
