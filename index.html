@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/rajdhani" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <img src="resources/images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h3>Hi i'm Youssef <span>Idry</span></h3>
+                <h1><span>Web</span> Developper</h1>
+                <p>Hello i'm Sen Maxuale, wb designer and photography, public figure. welcome to my website,<br>
+                i am best photography and designer, I am happy with my work, <br>
+                you have any help please let me know</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!----------------SERVICES----------------------->
+
+        <div id="services">
+            <div class="container-services">
+                <h3>what i offer</h3>
+                <h1>My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="ri-crop-2-fill"></i>
+                        <h2>web Design</h2>
+                        <p>Lorem ipsum dolor sit amet,
+                           tempere adipiscing elit, sed do eiusmod thast tempor incididunt labore.</p>
+                           <a href="">Read More</a>
+                    </div>
+                    <div>
+                        <i class="ri-crop-2-fill"></i>
+                        <h2>web Design</h2>
+                        <p>Lorem ipsum dolor sit amet,
+                           tempere adipiscing elit, sed do eiusmod thast tempor incididunt labore.</p>
+                           <a href="">Read More</a>
+                    </div>
+                    <div>
+                        <i class="ri-crop-2-fill"></i>
+                        <h2>web Design</h2>
+                        <p>Lorem ipsum dolor sit amet,
+                           tempere adipiscing elit, sed do eiusmod thast tempor incididunt labore.</p>
+                           <a href="">Read More</a>
+                    </div>
+                    <div>
+                        <i class="ri-crop-2-fill"></i>
+                        <h2>web Design</h2>
+                        <p>Lorem ipsum dolor sit amet,
+                           tempere adipiscing elit, sed do eiusmod thast tempor incididunt labore.</p>
+                           <a href="">Read More</a>
+                    </div>
+                    <div>
+                        <i class="ri-crop-2-fill"></i>
+                        <h2>web Design</h2>
+                        <p>Lorem ipsum dolor sit amet,
+                           tempere adipiscing elit, sed do eiusmod thast tempor incididunt labore.</p>
+                           <a href="">Read More</a>
+                    </div>
+                    <div>
+                        <i class="ri-crop-2-fill"></i>
+                        <h2>web Design</h2>
+                        <p>Lorem ipsum dolor sit amet,
+                           tempere adipiscing elit, sed do eiusmod thast tempor incididunt labore.</p>
+                           <a href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------ABOUT ME----------------------->
+
+        <div id="about">
+            <div class="container-about">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="resources/images/about.jpg" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Lorem ipsum dolor sit amet, tempere adipiscing elit,
+                    sed do eiusmod thast tempor incididunt labore.</p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br> Designing web / app interfaces</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android app</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents"  id="experience">
+                        <ul>
+                            <li><span>2023 current</span><br> peugeot citroen automobiles</li>
+                            <li><span>2023 current</span><br> peugeot citroen automobiles</li>
+                            <li><span>2023 current</span><br> peugeot citroen automobiles</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019 - 2021</span><br>Ista Ntic Hay Nahda Rabat</li>
+                            <li><span>2019</span><br>baccalauréat SVT</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------PORTFOLIO----------------------->
+    </main>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents"); 
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
