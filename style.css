@@ -20,6 +20,9 @@ header{
 .logo{
     width: 200px;
 }
+h3{
+    color: #ffb400;
+}
 .container{
     padding: 10px 10%;
 }
@@ -71,7 +74,15 @@ nav ul li a:hover::after{
     display: none;
     cursor: pointer;
   }
-  
+  @media (max-width: 767px) {
+    .header-text {
+      height: auto;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 60%;
+    }
+  }
   @media screen and (max-width: 767px) {
     .nav-links {
       display: none;
@@ -107,6 +118,14 @@ nav ul li a:hover::after{
 .container-services h3.container-services h1 {
     text-align: center;
 }
+.container-services h1 {
+    text-align: center;
+    font-size: 60px;
+}
+.container-services h3 {
+    text-align: center;
+    color: #ffb400;
+}
 .services-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -124,6 +143,7 @@ nav ul li a:hover::after{
     font-weight: 300;
     border-radius: 10px;
     transition: transform 0.5s;
+    cursor: pointer;
 }
 .services-list div i{
     font-size: 50px;
@@ -147,6 +167,13 @@ nav ul li a:hover::after{
 .services-list a:hover{
     color: black;
 }
+
+@media only screen and (max-width: 550px) {
+    .services-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }
 /*------------------About Me---------------------*/
 #about{
     padding: 80px 0 ;
@@ -186,6 +213,12 @@ nav ul li a:hover::after{
     cursor: pointer;
     position: relative;
 }
+.about-col-2 a {
+    color: #fff;
+    padding: 10px 25px;
+    background: #ffb400;
+    border-radius: 5px;
+}
 .tab-links::after{
     content: '';
     width: 0;
@@ -209,14 +242,18 @@ nav ul li a:hover::after{
 .tab-contents ul li span{
     color: #ffb400;
 }
-.tab-contents.active-tab{
+.tab-contents.active-tab {
     display: block;
+    margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 550px) {
     .row{
         justify-content: center;
         text-align: center;
+    }
+    .about-col-1 {
+        flex-basis: 70%;
     }
   }
 
@@ -234,6 +271,7 @@ nav ul li a:hover::after{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 .work img{
     width: 100%;
@@ -263,3 +301,16 @@ nav ul li a:hover::after{
 .work:hover .layer{
     height: 100%;
 }
+#portfolio h1.sub-title {
+    text-align: center;
+}
+@media only screen and (max-width: 550px) {
+
+.work {
+    margin: 15px;
+}
+.work-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+  }
