@@ -181,7 +181,7 @@ nav ul li a:hover::after{
         display: block;
         z-index: 2;
         position: relative;
-        left: 15%;
+        left: 21%;
     }
     .logo {
         width: 200px;
@@ -200,6 +200,7 @@ nav ul li a:hover::after{
         background: #0d0f28;
         left: 0;
         border-bottom: 0.5px solid #282828;
+        z-index: 1;
     }
     #slideMenu{
         display: none;
@@ -456,7 +457,9 @@ nav ul li a:hover::after{
     top: 0;
     height: 100%;
     width: 100%;
-    background: rgba(2, 3, 18, 0.8);
+    /*rgba(2, 3, 18, 0.8)*/
+    
+    background: rgb(255 180 0 / 42%);
     z-index: 1;
     right: 0;
     margin: auto;
