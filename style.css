@@ -73,6 +73,14 @@ header{
     align-items: center;
     justify-content: space-around;
 }
+ul#nav-links {
+    display: flex;
+}
+.show-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 .logo{
     width: 200px;
 }
@@ -82,10 +90,16 @@ h3{
 .container{
     padding: 10px 10%;
 }
-nav ul li{
-    display: inline-block;
+nav ul li {
     margin: 10px 20px;
-} 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+i.fas.fa-bars {
+    margin-right: 40px;
+    font-size: 25px;
+}
 nav ul li a{
     color: #fff;
     font-size: 18px;
@@ -112,6 +126,7 @@ nav ul li a:hover::after{
 .header-text span{
     color: #ffb400;
 }
+
 .header-text{
     color: #fff;
     margin-top: 20%;
@@ -139,26 +154,55 @@ nav ul li a:hover::after{
       margin-top: 60%;
     }
   }
+  .show-nav {
+    left: 0 !important;
+    z-index: 1;
+    display: grid;
+}
+@media only screen and (max-width: 550px){
+.work {
+    margin: 15px;
+    height: 350px;
+}
+}
   @media screen and (max-width: 767px) {
     .nav-links {
-      display: none;
-      position: fixed;
-      top: 0;
-      right: 0;
-      background: white;
-      height: 100%;
-      width: 80%;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-out;
+        display: grid;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        width: 50%;
+        background: #0d0f28;
+        left: -100%;
+        transition: 0.5s ease;
+        border-right: 0.5px solid #282828;
     }
     .menu-icon {
-      display: block;
+        display: block;
+        z-index: 2;
+        position: relative;
+        left: 15%;
+    }
+    .logo {
+        width: 200px;
+        right: 10%;
+        position: relative;
     }
     .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        overflow: hidden;
+        width: 100%;
+        background: #0d0f28;
+        left: 0;
+        border-bottom: 0.5px solid #282828;
+    }
+    #slideMenu{
+        display: none;
     }
   }
   
@@ -234,18 +278,27 @@ nav ul li a:hover::after{
         display: flex;
         flex-wrap: wrap;
     }
+    #portfolio {
+        position: relative;
+        z-index: -1;
+        height: auto !important;
+    }
   }
 /*------------------About Me---------------------*/
-#about{
-    padding: 80px 0 ;
+#about {
+    height: 100vh;
 }
-.row{
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
 }
-.container-about{
-    margin-top: 4%;
+.container-about {
+    
+    width: 70%;
+    margin: 0 auto;
 }
 .about-col-1{
     flex-basis: 35%;
@@ -266,7 +319,9 @@ nav ul li a:hover::after{
 
 .tab-title{
     display: flex;
-    margin: 20px 0 40px;
+    margin: 40px 0;
+    position: relative;
+    z-index: -1;
 }
 .tab-links{
     margin-right: 50px;
@@ -299,7 +354,7 @@ nav ul li a:hover::after{
     display: none;
 }
 .tab-contents ul li{
-    margin: 10px 0;
+    margin: 40px 0;
 }
 .tab-contents ul li span{
     color: #ffb400;
@@ -310,9 +365,11 @@ nav ul li a:hover::after{
 }
 
 @media only screen and (max-width: 550px) {
-    .row{
+    .row {
         justify-content: center;
         text-align: center;
+        display: flex;
+        flex-direction: column;
     }
     .about-col-1 {
         flex-basis: 70%;
@@ -387,6 +444,9 @@ nav ul li a:hover::after{
     color: #fff;
     text-align: center;
 }
+#portfolio{
+    height: 100vh;
+}
   .layer {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
@@ -429,12 +489,16 @@ nav ul li a:hover::after{
     margin: 15px;
 }
 .work-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    height: auto;
+    justify-items: center;
 }
   }
 
   /* -----------------Contact Me--------------- */
+#contact {
+    height: 100vh;
+}
 
   .contact-left {
     width: 40%;
@@ -450,10 +514,10 @@ nav ul li a:hover::after{
     width: 80%;
     margin: 0 auto;
     justify-content: space-between;
+    height: 100vh;
+    align-items: center;
 }
-.container-contact {
-    margin: 10% 0;
-}
+
 .contact-left p {
     font-weight: 500;
     display: flex;
@@ -504,8 +568,10 @@ form input, form textarea{
 
 @media (max-width: 576px) {
     .row-contact {
-      flex-direction: column;
-      text-align: -webkit-center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        display: flex;
+        height: 100vh;
     }
     .contact-left {
         width: 100%;
@@ -516,6 +582,7 @@ form input, form textarea{
     }
     .contact-right {
       width: 100%;
+      text-align: -webkit-center;
     }
   }
 

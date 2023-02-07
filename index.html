@@ -18,17 +18,17 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <img src="resources/images/logo.png" class="logo">
                 <div class="menu-icon" onclick="toggleSlider()">
-                  <i class="fas fa-bars"></i>
+                  <i id="toggleButton" class="fas fa-bars"></i>
                 </div>
-                <ul class="nav-links" id="nav-links">
+                <ul class="nav-links" id="nav-links" id="slideMenu">
                   <li><a href="#">Home</a></li>
                   <li><a href="#services">services</a></li>
                   <li><a href="#about">about</a></li>
                   <li><a href="#portfolio">Portfolio</a></li>
                   <li><a href="#contact">Contact Us</a></li>
                 </ul>
+                <img src="resources/images/logo.png" class="logo">
               </nav>
             <div class="header-text">
                 <h3>Hi i'm Youssef <span>Idry</span></h3>
@@ -271,5 +271,19 @@
               loading.style.display = "none";
             }
           </script>
+
+<script>
+    function toggleSlider() {
+      var toggleButton = document.getElementById("toggleButton");
+      var slideMenu = document.getElementById("slideMenu");
+  
+      if (slideMenu.style.display === "block") {
+        slideMenu.style.display = "none";
+      } else {
+        slideMenu.style.display = "block";
+      }
+    }
+  </script>
+
 </body>
 </html>
