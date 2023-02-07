@@ -11,6 +11,10 @@
     <title>Document</title>
 </head>
 <body>
+        <!-- Loading page -->
+        <div id="loading">
+            <div class="loader">Loading...</div>
+          </div>
     <header>
         <div class="container">
             <nav class="navbar">
@@ -136,10 +140,10 @@
         <!----------------PORTFOLIO----------------------->
         <div id="portfolio">
             <div class="container-portfolio">
-                <h1 class="sub-title">My Work</h1>
+                <h1 class="sub-title-portfolio">My Work</h1>
                 <div class="work-list">
                     <div class="work">
-                        <img src="resources/images/p2.jpg" alt="">
+                        <img src="resources/images/p1.jpg" alt="">
                         <div class="layer">
                             <h3>Social Media App</h3>
                             <p>the app connects you yo telented people around the world.
@@ -157,7 +161,34 @@
                         </div>
                     </div>
                     <div class="work">
-                        <img src="resources/images/p2.jpg" alt="">
+                        <img src="resources/images/p3.jpg" alt="">
+                        <div class="layer">
+                            <h3>Social Media App</h3>
+                            <p>the app connects you yo telented people around the world.
+                                download it from link below</p>
+                                <a href="#download"><i class="ri-link" style="color: #fff;"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="resources/images/p3.jpg" alt="">
+                        <div class="layer">
+                            <h3>Social Media App</h3>
+                            <p>the app connects you yo telented people around the world.
+                                download it from link below</p>
+                                <a href="#download"><i class="ri-link" style="color: #fff;"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="resources/images/p3.jpg" alt="">
+                        <div class="layer">
+                            <h3>Social Media App</h3>
+                            <p>the app connects you yo telented people around the world.
+                                download it from link below</p>
+                                <a href="#download"><i class="ri-link" style="color: #fff;"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="resources/images/p3.jpg" alt="">
                         <div class="layer">
                             <h3>Social Media App</h3>
                             <p>the app connects you yo telented people around the world.
@@ -196,7 +227,7 @@
         </div>
     </main>
     <footer>
-        <div class="container">
+        <div class="container-footer">
           <p>Copyright &copy; 2023 Your Company</p>
           <div class="social-icons">
             <a href="#"><i class="ri-facebook-fill"></i></a>
@@ -230,5 +261,15 @@
       navLinks.classList.toggle("show-nav");
     };
     </script>
+        <script>
+            // Wait for the main content to load
+            window.onload = function() {
+              // Get the loading page element
+              var loading = document.getElementById("loading");
+      
+              // Remove the loading page from the page
+              loading.style.display = "none";
+            }
+          </script>
 </body>
 </html>
