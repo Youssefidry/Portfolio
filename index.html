@@ -285,5 +285,32 @@
     }
   </script>
 
+
+<script>
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    };
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+    
+    const services = document.querySelectorAll('.services-list div');
+    const work = document.querySelectorAll('.work-list .work');
+    services.forEach(service => {
+      observer.observe(service);
+    });
+    work.forEach(service => {
+      observer.observe(service);
+    });
+  </script>
+  
 </body>
 </html>

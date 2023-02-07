@@ -167,7 +167,7 @@ nav ul li a:hover::after{
 }
   @media screen and (max-width: 767px) {
     .nav-links {
-        display: grid;
+        display: grid !important;
         height: 100%;
         position: fixed;
         top: 0;
@@ -210,6 +210,19 @@ nav ul li a:hover::after{
     transform: translateX(0%);
   }
 /* -----------------Services--------------- */
+.services-list div {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-out;
+  }
+  
+  .services-list div.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  
+  
 #services{
     padding: 107px 0;
     width: 80%;
@@ -369,14 +382,28 @@ nav ul li a:hover::after{
         justify-content: center;
         text-align: center;
         display: flex;
-        flex-direction: column;
+    }
+    .about-col-1 img {
+        width: 100%;
     }
     .about-col-1 {
-        flex-basis: 70%;
+        flex-basis: 60%;
     }
   }
 
 /*------------------PORTFOLIO---------------------*/
+
+
+.work-list .work {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-out;
+  }
+  
+  .work-list .work.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 .work-list {
     display: flex;
